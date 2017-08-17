@@ -1,0 +1,100 @@
+body {
+    color: black;
+
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 100%;
+    font-family: 'Assistant', sans-serif;
+
+    /*font: normal 14px/140% sans-serif;*/
+/*
+    background-color: aliceblue;
+    background-image: url(../images/linen-texture.jpg);
+    background-repeat: repeat;
+    background-position: top right;
+*/
+    background: aliceblue url(../images/linen-texture.jpg) top right repeat;
+}
+
+.wrapper {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 100%;
+    font-family: 'Assistant', sans-serif;
+    /*font: bolder 14px/100% 'Assistant';*/
+    padding: 30px 20px 23px 20px;
+/*
+    border-width: 2px;
+    border-style:double;
+    border-color: black;
+*/
+    margin: 15px 15px 15px 15px;
+    min-width: 900px;
+    
+}
+header {
+    border-radius: 10px;
+    position: relative;
+    background-color: #e2e2e2;
+    padding: 30px 20px 25px 20px;
+    margin:inherit;
+/*    padding: 40px 20px 30px 20px;*/
+}
+nav {
+    margin-left: 30px; 
+    height: 57px;
+    background-color: #d39696;
+    border-radius: 10px;
+}
+nav ul {
+    margin-top:25px;
+    margin-left: 15px;
+    display:inline-block;
+    text-align: center;
+    color: white;
+}
+
+nav li {
+    text-align: center;
+    margin: 20px 15px 0px 0px;
+    list-style-type: none;
+    display: inline;
+    padding: 3px 10px;
+}
+
+
+nav #bagua-logo {
+    float:left;
+    height: 92px;
+    background-color:transparent;
+    margin: -18px;
+    margin-left:-40px;
+}
+
+nav a {
+    position:relative;
+    margin: 20px 0px 20px 0px;
+    padding-top: 20px;
+    text-align: center;
+    font-family: 'Tangerine';
+    font-size: 35px;
+    
+    color: white;
+    background-color:transparent;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+main {
+    border-radius: 10px;
+    padding: inherit;
+    margin: inherit;
+    margin-top: 10px;
+    background-color: #d39696;
+    height: 400px;
+    border-color: #e2e2e2;
+    border: 20px #e2e2e2 solid;
+}
