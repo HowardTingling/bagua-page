@@ -29,11 +29,14 @@ body {
     border-color: black;
 */
     margin: 15px 15px 15px 15px;
-    min-width: 900px;
+    min-width: 1024px;
     
 }
 header {
     border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
     position: relative;
     background-color: #e2e2e2;
     padding: 30px 20px 25px 20px;
@@ -45,6 +48,9 @@ nav {
     height: 57px;
     background-color: #d39696;
     border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
 }
 nav ul {
     margin-top:25px;
@@ -78,7 +84,6 @@ nav a {
     text-align: center;
     font-family: 'Tangerine';
     font-size: 35px;
-    
     color: white;
     background-color:transparent;
     text-decoration: none;
@@ -91,13 +96,19 @@ nav a:hover {
 main {
     position: relative;
     border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
     padding: inherit;
     margin: inherit;
     margin-top: 10px;
     background-color: #d39696;
-    height: 400px;
+    height: auto;
     border-color: #e2e2e2;
     border: 20px #e2e2e2 solid;
+    min-height: 100%;
+    display: block;
+    overflow-y: auto;
 }
 
 main #bagua-pose {
@@ -105,4 +116,44 @@ main #bagua-pose {
     margin-left:-60px;
     margin-top: -40px;
     width:500px;
+}
+
+.main-wrapper {
+    font-family: 'Assistant', sans-serif;
+    font-size: 20px;
+}
+
+.main-wrapper #home {
+    display: block;
+    background-image: url(../images/bagua-pose0.png);
+}
+
+.main-wrapper #home p {
+    width:500px;
+    float: right;
+    padding: 20px 20px 20px 20px;
+    background-color: #ffbebe;
+    border-radius:5px;
+    margin-right: 50px;
+    line-height:1.5em;
+}
+
+.main-wrapper #outer {
+    display: none;
+}
+
+.main-wrapper #inner {
+    display: none;
+}
+
+.main-wrapper #chuan-zhang {
+    display: none;
+}
+
+.main-wrapper #blog {
+    display: none;
+}
+
+.main-wrapper #contact {
+    display: none;
 }
