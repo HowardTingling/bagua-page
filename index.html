@@ -14,7 +14,7 @@
         <header>
             <nav>
                 <img src="images/bagualogo.png" alt="bagua logo" id="bagua-logo">
-                <ul>
+                <ul class="chinese">
                     <li><a href="" onclick="return false">首页</a></li> 
                     <li><a href="" onclick="return false">外掌</a></li> 
                     <li><a href="" onclick="return false">内掌</a></li>
@@ -22,22 +22,44 @@
                     <li><a href="" onclick="return false">博客</a></li>
                     <li><a href="" onclick="return false">联络资讯</a></li>
                 </ul>
+                <ul class="english" style="display:none;">
+                    <li><a href="">Home</a></li> 
+                    <li><a href="">Outer</a></li> 
+                    <li><a href="">Inner</a></li>
+                    <li><a href="">Chuan Zhang</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
             </nav>
+            <span id="lang-select">Select a language: <a href="">English</a>/<a href="">中文</a></span>
         </header>
         <main>
             <div class="main-wrapper">
                 <div id="home" class="page">
-                    <img src="images/bagua-pose0.png" id="bagua-pose" alt="bagua-pose">
-                    <p>
-                        Bagua is one of three
+                    <p class="chinese" style="display:none;"> CHINESE BAGUA HOME DESCRIPTION</p>
+                    <p class="english">
+                        Bagua is known to be one of the three great traditional Chinese martial arts (the others are Xinyi and Taichi). There are many forms to Bagua and different methods of Bagua Walking tailored to different sets of results. 
                     </p>
                 </div>
-                <div id="outer" class="page"><p>OUTER: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sem enim, dignissim ut enim sit amet, commodo suscipit massa. Integer euismod elementum ultricies. Aenean mollis vitae mi in porta. Pellentesque fermentum mi at ante viverra gravida cursus id purus. Maecenas non magna arcu. Duis ultricies, sapien sed iaculis suscipit, neque lorem interdum nibh, sit amet dignissim neque magna ac ante. Nulla lectus elit, iaculis in ultricies ac, semper vitae turpis.</p></div>
-                <div id="inner" class="page"><p>INNER: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sem enim, dignissim ut enim sit amet, commodo suscipit massa. Integer euismod elementum ultricies. Aenean mollis vitae mi in porta. Pellentesque fermentum mi at ante viverra gravida cursus id purus. Maecenas non magna arcu. Duis ultricies, sapien sed iaculis suscipit, neque lorem interdum nibh, sit amet dignissim neque magna ac ante. Nulla lectus elit, iaculis in ultricies ac, semper vitae turpis.</p></div>
-                <div id="chuan-zhang" class="page"><p>CHUAN: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sem enim, dignissim ut enim sit amet, commodo suscipit massa. Integer euismod elementum ultricies. Aenean mollis vitae mi in porta. Pellentesque fermentum mi at ante viverra gravida cursus id purus. Maecenas non magna arcu. Duis ultricies, sapien sed iaculis suscipit, neque lorem interdum nibh, sit amet dignissim neque magna ac ante. Nulla lectus elit, iaculis in ultricies ac, semper vitae turpis.</p></div>
-                <div id="contact" class="page">CONTACT</div>
-                <div id="blog" class="page">
-                    BLOG
+                <div id="outer" class="page">
+                    <p class="chinese" style="display:none;"> CHINESE BAGUA DESCRIPTION</p>
+                    <p class="english" style="display:none;"> ENGLISH BAGUA DESCRIPTION</p>
+                </div>
+                <div id="inner" class="page">               
+                    <p class="chinese" style="display:none;"> CHINESE BAGUA INNER</p>
+                    <p class="english" style="display:none;"> ENGLISH BAGUA INNER</p>
+                </div>
+                <div id="chuan-zhang" class="page">
+                    <p class="chinese" style="display:none;"> CHINESE BAGUA CHUAN ZHANG</p>
+                    <p class="english" style="display:none;"> ENGLISH BAGUA CHUAN ZHANG</p>
+                </div>
+                <div id="contact" class="page">
+                    <p class="chinese" style="display:none;"> CHINESE BAGUA CONTACT</p>
+                    <p class="english" style="display:none;"> ENGLISH BAGUA CONTACT</p>
+                </div>
+                <div id="blog" class="page">                
+                    <p class="chinese" style="display:none;"> CHINESE BAGUA BLOG</p>
+                    <p class="english" style="display:none;"> ENGLISH BAGUA BLOG</p>
                 </div>
             </div>
         </main>
