@@ -1,17 +1,21 @@
 /* PAGE SELECTION */
 //HIDE ALL PAGE ELEMENTS & THEN DISPLAY HOME PAGE ONLY
-var pagewrapper = document.querySelectorAll(".main-wrapper .page");
+var pagewrapper = document.querySelectorAll(".page .chinese");
+var chinesewrapper = document.querySelectorAll(".main-wrapper .page");
 for (var item of pagewrapper) {
     item.style.display = "none";
 }
+console.log(pagewrapper[0]);
 var currentpage = pagewrapper[0];
 currentpage.style.display = "block"
 //NAVIGATE BETWEEN DIFFERENT PAGE DISPLAYS ON CLICK OF EACH NAVIGATION LINK
-var navlinks = document.querySelectorAll("nav li a");
+var navlinks = document.querySelectorAll("nav .chinese li a");
+console.log(navlinks.length + " " + pagewrapper.length);
 for (var i = 0; i < navlinks.length; ++i) {
     navlinks[i].addEventListener("click", pageswapper.bind(null, i, pagewrapper), false);
 }
 function pageswapper(index, wrapper) {
+    console.log("current page: " + wrapper[index].textContent);
     currentpage.style.display = "none";
     currentpage = wrapper[index];
     currentpage.style.display = "block";

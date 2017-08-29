@@ -98,7 +98,7 @@ nav li a:hover {
 
 #lang-select {
     position:relative;
-    display: inline-block;
+    float:right;
     margin-top:8px
 }
 
@@ -162,22 +162,22 @@ main #bagua-pose {
     line-height:1.5em;
 }
 
-.main-wrapper #outer {
-    display: none;
-}
-
-.main-wrapper #inner {
-    display: none;
+.main-wrapper #basic-palms {
+    
 }
 
 .main-wrapper #chuan-zhang {
-    display: none;
+    display: block;
+}
+
+.main-wrapper #bio {
+    
 }
 
 .main-wrapper #blog {
-    display: none;
+    
 }
 
 .main-wrapper #contact {
-    display: none;
+    
 }
