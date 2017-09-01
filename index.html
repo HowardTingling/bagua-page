@@ -14,9 +14,9 @@
         <header>
             <nav>
                 <img src="images/bagualogo.png" alt="bagua logo" id="bagua-logo">
-                <div class="chinese">
+                <div class="chinese" id="chinesenav">
                     <ul>
-                        <li><a href="" onclick="return false">首页</a></li> 
+                        <li><a href="" onclick="return false">首页</a></li>
                         <li><a href="" onclick="return false">基本掌式</a></li>
                         <li><a href="" onclick="return false">穿掌</a></li>
                         <li><a href="" onclick="return false">鄒老師</a></li>
@@ -24,7 +24,7 @@
                         <li><a href="" onclick="return false">联络资讯</a></li>
                     </ul>
                 </div>
-                <div class="english" style="display:none;">
+                <div class="english" id="englishnav">
                     <ul>
                         <li><a href="" onclick="return false">Home</a></li> 
                         <li><a href="" onclick="return false">Stances</a></li> 
@@ -35,7 +35,11 @@
                     </ul>
                 </div>
             </nav>
-            <span id="lang-select">Select a language: <a href="">English</a>/<a href="">中文</a></span>
+            <span id="lang-select">
+                Select a language: 
+                <a id="english" href="" onclick="return false">English</a>/
+                <a id="chinese" href="" onclick="return false">中文</a>
+            </span>
         </header>
         <main>
             <div class="main-wrapper">

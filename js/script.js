@@ -1,23 +1,30 @@
 /* PAGE SELECTION */
 //HIDE ALL PAGE ELEMENTS & THEN DISPLAY HOME PAGE ONLY
-var pagewrapper = document.querySelectorAll(".page .chinese");
-var chinesewrapper = document.querySelectorAll(".main-wrapper .page");
-for (var item of pagewrapper) {
+var chinesewrapper = document.querySelectorAll(".page .chinese");
+var englishwrapper = document.querySelectorAll(".page .english");
+var currentwrapper = englishwrapper;
+for (var item of chinesewrapper) {
     item.style.display = "none";
 }
-console.log(pagewrapper[0]);
-var currentpage = pagewrapper[0];
-currentpage.style.display = "block"
+for (var item of englishwrapper) {
+    item.style.display = "none";
+}
+var currentindex = 0;
+var currentpage = currentwrapper[currentindex];
+currentpage.style.display = "block";
 //NAVIGATE BETWEEN DIFFERENT PAGE DISPLAYS ON CLICK OF EACH NAVIGATION LINK
-var navlinks = document.querySelectorAll("nav .chinese li a");
-console.log(navlinks.length + " " + pagewrapper.length);
-for (var i = 0; i < navlinks.length; ++i) {
-    navlinks[i].addEventListener("click", pageswapper.bind(null, i, pagewrapper), false);
+var chineselinks = document.querySelectorAll("nav .chinese li a");
+var englishlinks = document.querySelectorAll("nav .english li a");
+for (var i = 0; i < chineselinks.length; ++i) {
+    chineselinks[i].addEventListener("click", pageswapper.bind(null, i, chinesewrapper), false);
+}
+for (var i = 0; i < englishlinks.length; ++i) {
+    englishlinks[i].addEventListener("click", pageswapper.bind(null, i, englishwrapper), false);
 }
 function pageswapper(index, wrapper) {
-    console.log("current page: " + wrapper[index].textContent);
     currentpage.style.display = "none";
-    currentpage = wrapper[index];
+    currentindex = index;
+    currentpage = wrapper[currentindex];
     currentpage.style.display = "block";
 }
 
@@ -33,4 +40,29 @@ ON CLICK
 2. set page based on selected outcome
 */
 
-var langcontainer = document.getElementById("lang-select");
+var englishoption = document.getElementById("english");
+var chineseoption = document.getElementById("chinese");
+var chinesenav = document.getElementById("chinesenav");
+var englishnav = document.getElementById("englishnav");
+chinesenav.style.display="none";
+englishoption.addEventListener("click", langswapper.bind(null, englishwrapper, englishnav), false);
+chineseoption.addEventListener("click", langswapper.bind(null, chinesewrapper, chinesenav), false);
+
+var currentnav = englishnav;
+function langswapper(wrapper, nav) {
+    //IF LANGUAGE NOT ALREADY SELECTED, TURN OFF ALL PAGES OF CURRENT LANGUAGE
+    for (var item of currentwrapper) {
+        item.style.display = "none";
+    }
+    currentwrapper = wrapper;
+    for (var item of currentwrapper) {
+        item.style.display = "none";
+    }
+    currentpage = currentwrapper[currentindex];
+    currentpage.style.display = "block";
+    console.log(currentwrapper[currentindex]);
+    //TURN OFF NAV OF CURRENT LANGUAGE
+    currentnav.style.display = "none";
+    currentnav = nav;
+    currentnav.style.display = "block";
+}
